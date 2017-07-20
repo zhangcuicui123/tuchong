@@ -50,7 +50,7 @@ export default {
                 <div class="row-group">
                     <div class="row-title" tag_id=${categories[i].tag_id}>
                         <h2 class="text-linear">${categories[i].tag_name}</h2>
-                        <a class="tags-all-link" href="/find"> 查看全部 &gt; </a>
+                        <a class="tags-all-link" href="/FindAll"> 查看全部 &gt; </a>
                     </div>
                     <ul class="row-content tags-list">
 
@@ -68,6 +68,7 @@ export default {
         var self=this;
         $('.row-title').each(function(){
             var tag_id=$(this).attr('tag_id');
+            localStorage.tag_id=tag_id;
             // console.log(tag_id);
             var url=self.HOST+'/discover/'+tag_id+'/category?count=12&page=1';
             self.$http.get(url).then(res => {

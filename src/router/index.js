@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home'
 import Find from '@/views/Find'
+import FindAll from '@/views/FindAll'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,10 @@ let router = new VueRouter({
     {
       path: '/find',
       component: Find
+    },
+    {
+      path: '/findAll',
+      component: FindAll
     }
   ]
 

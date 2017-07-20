@@ -151,22 +151,26 @@
     text-align: center;
     font-size: 24px;
     margin: 70px 0 0;
-    line-height: 1;
+    line-height: 1.5;
     font-weight: 400;
 }
 .hot-posts p, .hot-events p {
     text-align: center;
     margin: 40px 0 70px;
-    line-height: 1;
+    line-height: 1.5;
 }
 .posts-list{
     overflow:hidden;
 }
 .posts-list .post-item {
-     margin-top: 10px;
     float:left;
+    margin-top: 10px;
+    margin-left:10px;
+    width:30%;    
 }
 .post-cover {
+    width:100%;
+    height:100%;
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -207,7 +211,7 @@
 .post-cover .post-title {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 32%;
     width: 100%;
     max-height: 50px;
     padding: 0 10px;
@@ -224,7 +228,7 @@
 .post-cover .post-author-icon {
     position: absolute;
     left: 50%;
-    bottom: 50px;
+    bottom: 33%;
     width: 30px;
     height: 30px;
     margin-left: -15px;
@@ -245,8 +249,8 @@
 .events-list li {
     position: relative;
     display: inline-block;
-    width: 380px;
-    height: 190px;
+    width: 30%;
+    height: 12rem;
     margin-left: 15px;
     margin-top: 15px;
     -moz-background-size: cover;
@@ -313,16 +317,37 @@
         text-align: center;
         font-size: 18px;
     }
-    .hot-posts .section-word, .hot-events .section-word {
+    .hot-posts p, .hot-events p {
         padding: 0 10px;
         text-align: center;
         font-size: 12px;
+    }
+    .posts-list li {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 0;
+        background-size: cover;
+        background-position: center;
+    }
+    .events-list li {
+        position: relative;
+        display: inline-block;
+        width: 47%;
+        height: 12rem;
+        margin-top:0;
+        margin-left:0;
+        -moz-background-size: cover;
+        background-size: cover;
+        background-position: center;
     }
 }
 @media screen and (max-width:767px){
     .welcome-cover .cover-author {
         right: 5px;
         bottom: 5px;  
+    }
+    .cover-wrapper .cover-qrcode{
+        display:none;
     }
     .welcome-cover .guide-bar{
         position: absolute;
@@ -356,12 +381,26 @@
         display: inline-block;
     }
     .welcome-cover .guide-bar a {
-        margin-top:0px;
-        font-size: 12px;
-        color: #fff;
+        display:none;
     }
     .cover-wrapper .link-ios,
     .cover-wrapper .link-android{
         display:none;
+    }
+    .posts-list .post-item {
+        float:left;
+        margin-top: 10px;
+        width:45%;    
+    }
+    .events-list li {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 12rem;
+        margin-top:0;
+        margin-left:0;
+        -moz-background-size: cover;
+        background-size: cover;
+        background-position: center;
     }
 }

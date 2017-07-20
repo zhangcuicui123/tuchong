@@ -15,6 +15,10 @@
                 
             </ul>
         </section>
+        <section class="welcome-download">
+            <a href="/" class="download-btn">下载APP</a>
+            <div class="download-show"></div>
+        </section>
     </section>
   </div>
 </template>
@@ -34,7 +38,7 @@ export default {
       getHotsData:function(){
             var url = this.HOST + '/feed-app'
             this.$http.get(url).then(res => {
-            // console.log(res.data.feedList);
+            console.log(res.data.feedList);
             var obj=res.data.feedList;
             var html='';
             for(var i=0;i<6;i++){
@@ -42,7 +46,6 @@ export default {
                  <li class="post-item">
                     <a class="post-cover" 
                         style="
-                        width:393px;height:295px;
                         background-image:url(https://photo.tuchong.com/${obj[i].images[0].user_id}/ft640/${obj[i].images[0].img_id}.webp"
                         href="${obj[i].url}">
                         <div class="post-mask leave-left">
@@ -56,20 +59,16 @@ export default {
             }
             $('.posts-list').append(html);
             $('.posts-list>li').each(function(idx){
-                if(idx<3){
-                    $('.posts-list>li').eq(idx).css('margin-top','0px');
-                }
-                if(idx%3==0){
-                    $('.posts-list>li').eq(idx).css('margin-left','0px');
-                }else{
-                    $('.posts-list>li').eq(idx).css('margin-left','10px');
-                }
-
                 $(this).mouseover(function(){
                     $(this).find('.post-mask').css('z-index','0');
                 }).mouseout(function(){
                     $(this).find('.post-mask').css('z-index','-1');
                 })
+            })
+            window.onload=this.gaodu()
+            var self=this;
+            $(window).resize(function(){
+                self.gaodu()
             })
             },res => {
             console.info('调用失败');
@@ -95,7 +94,15 @@ export default {
         },res => {
             console.info('调用失败');
         });
-      }
+      },
+      gaodu(){
+            $(".posts-list .post-item").each(function(){
+                var _this=$(this);
+                var width=_this.width();
+                // console.log(width);
+                _this.height(width*9/16);
+            });
+        }
   }
 }
 </script>
