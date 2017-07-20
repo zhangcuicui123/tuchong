@@ -1,0 +1,306 @@
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.text-center {
+    text-align: center;
+}
+.over-auto {
+    overflow: auto;
+}
+/* header */
+header {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #000;
+    font-weight: 500;
+    z-index: 2;
+}
+/* Navbar */
+.navbar{
+    height:inherit;
+}
+.navbar-default{
+    width:95%;
+    margin:0 auto;
+    background-color: #000 !important;
+    border: none;
+}
+.navbar-default a{
+    color:#fff !important;
+}
+.navbar-default a:hover{
+    color:#c99a05 !important;
+    background-color:transparent;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus,
+ .navbar-default .navbar-nav>.active>a:hover,
+ .navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus,
+ .navbar-default .navbar-nav>.open>a:hover {
+    background-color:transparent;
+}
+.navbar-brand{
+    display: inline-block;
+    height: 20px;
+    width: 80px;
+    margin: 20px;
+    background-image:url(/static/img/logo.png);
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+.nav>li{
+    margin-left:34px;
+}
+.nav-search {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    padding: 20px 0;
+    margin-right: 15px;
+    vertical-align: top;
+}
+.nav-search .icon-search {
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    width:20px;
+    height:20px;
+    background-image:url(/static/img/icon-search.png);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+.nav-search form {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+.nav-search form input {
+    width: 0;
+    height: 20px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #fff;
+    background: 0 0;
+    border: 0;
+    outline: 0;
+    font-family: inherit;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;
+}
+.nav-register, .nav-login {
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 30px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    font-size: 14px;
+}
+.navbar-default .nav-register:hover, .navbar-default .nav-login:hover{
+    color:#fff !important;
+    text-decoration: none;
+    cursor:pointer;
+}
+.nav-register {
+    width: 100px;
+    text-align: center;
+    background-color: #c99a05;
+}
+.navbar-default .nav-register:hover{
+    background-color:#c99a05;
+}
+.dropdown-menu{
+    background-color: #000;
+}
+.dropdown-menu > li>a:hover{
+    background-color: #000;
+}
+@media screen and (max-width:1024px){
+    body{
+        font-size:16px;
+    }
+    header{
+        width:100%;
+    }
+    .nav>li{
+        margin-left:20px;
+    }
+}
+@media screen and (min-width:768px){
+    body{
+        font-size:14px;
+    }
+    header{
+        width:100%;
+    }
+    .nav>li{
+        margin-left:17px;
+    }
+    .nav-login{
+        margin-left:0px;
+    }
+    .navbar-nav{
+        background-color:#000;
+    }
+    .navbar-default .navbar-collapse{
+        border-color:transparent;
+     }
+}
+@media screen and (max-width:767px){
+    body{
+        font-size:12px;
+    }
+    header{
+        width:100%;
+    }
+    .nav>li{
+        margin-left:17px;
+    }
+    .nav-login{
+        margin-left:0px;
+    }
+    .navbar-nav{
+        background-color:#000;
+    }
+    .navbar-default .navbar-collapse{
+        border-color:transparent;
+     }
+}
+footer {
+    width: 100%;
+    padding: 20px 40px;
+    margin: 0 auto;
+    clear: both;
+    color: #f9f9f9;
+    font-size: 12px;
+    background-color: #222;
+    margin-top: 100px;
+}
+footer .footer-fluid {
+    margin-bottom: 32px;
+}
+footer .fluid-title {
+    font-size: 14px;
+    color: #c99a05;
+    margin-bottom: 10px;
+    letter-spacing: 10px;
+}
+footer .tuchong-desc {
+    margin-right: 70px;
+    line-height: 1.67;
+}
+footer .fluid-content {
+    max-width: 342px;
+}
+footer .qrcode {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin-right: 10px;
+}
+footer .qrcode.download {
+    background-image: url(/static/img/hf-erweima.png);
+}
+footer .qrcode-parallel {
+    display: inline-block;
+    vertical-align: middle;
+}
+footer a {
+    color: #fff !important;
+    text-decoration: none;
+    outline: 0;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .app-link {
+    padding: 6px 24px;
+    border: 1px solid #f9f9f9;
+    margin-bottom: 10px;
+    display: block;
+}
+footer .app-link:last-child {
+    margin-bottom: 0;
+}
+footer .link-logo {
+    margin-right: 5px;
+    position: relative;
+    display: inline-block;
+}
+.icon-wechat,.icon-weibo{
+    display:inline-block;
+    width:21px;
+    height:21px;
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+.icon-wechat{
+    background-image:url(/static/img/weixin.png);
+}
+.icon-weibo{
+    background-image:url(/static/img/xinlang.png);
+}
+footer .qrcode.wechat {
+    background-image: url(/static/img/hfr-erweima.jpg);
+    position: absolute;
+    top: 0;
+    left: -90px;
+    display: none;
+}
+.wechat:hover .qrcode.wechat{
+    display:block;
+}
+footer .tuchong-detail {
+    color: #85888a;
+}
+footer .footer-left {
+    float: left;
+}
+footer .slash-list {
+    display: inline-block;
+    margin-left: 10px;
+}
+.slash-list .slash-item {
+    display: inline-block;
+}
+footer .slash-list .slash-item:before {
+    color: #85888a;
+    text-decoration: none;
+}
+.slash-list .slash-item:before {
+    content: '/';
+    color: #E0E0E0;
+    font-size: 12px;
+    margin: 0 10px;
+}
+.slash-list .slash-item:first-child:before {
+    content: '';
+    margin: 0;
+}
+footer .footer-right {
+    float: right;
+}
+.icon-gotop {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width:40px;
+    height:40px;
+    display: none; 
+    background-color: rgba(0,0,0,.6);
+    background-image:url(/static/img/top.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    color: #fff;
+    z-index: 9;
+}

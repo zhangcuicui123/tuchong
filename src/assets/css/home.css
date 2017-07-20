@@ -1,0 +1,367 @@
+/* swipe */
+.h-sec{
+    display:block;
+    min-height:300px;
+}
+.container-fluid{
+    margin:0;
+    padding:0;
+}
+.welcome-cover{
+    position: relative;
+    height: 90%;
+    min-height: 500px;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #555;
+}
+.welcome-cover .cover-wrapper {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(-50%);
+    -moz-transform: scale(1) translateY(-50%);
+    -ms-transform: scale(1) translateY(-50%);
+    transform: scale(1) translateY(-50%);
+}
+.cover-wrapper {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: scale(0.9) translateY(-50%);
+    -moz-transform: scale(0.9) translateY(-50%);
+    -ms-transform: scale(0.9) translateY(-50%);
+    transform: scale(0.9) translateY(-50%);
+    opacity: 0;
+    -webkit-transition: all .5s ease-out .3s;
+    -moz-transition: all .5s ease-out .3s;
+    transition: all .5s ease-out .3s;
+}
+.cover-wrapper .cover-slogan {
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 2.4em;
+}
+.cover-wrapper .cover-enter {
+    display: block;
+    width: 12rem;
+    margin: 4% auto 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 4rem;
+    background-color: #0090e3;
+    color: #fff;
+    font-size: 2rem;
+}
+.cover-wrapper .cover-qrcode {
+    width: 13.2rem;
+    height: 13.2rem;
+    border: 1px solid #fff;
+    margin: 8rem auto 1.5rem;
+}
+.cover-wrapper .cover-qrcode .qrcode-image {
+    display: block;
+    width: 94%;
+    height: 94%;
+    margin: 0.4rem;
+    background-image: url(/static/img/h-erweima.png);
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.cover-wrapper .link-android, .cover-wrapper .link-ios {
+    display: block;
+    width: 158px;
+    height: 46px;
+    margin: 10px auto 0;
+    text-align: center;
+    color: #fff;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.cover-wrapper .link-ios {
+    background-image: url(/static/img/h-downIos.png);
+}
+.cover-wrapper .link-android {
+    background-image: url(/static/img/h-downAnd.png);
+}
+.welcome-cover .cover-author {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #fff;
+    text-shadow: 0 1px 2px #000;
+    line-height: 1;
+}
+.welcome-cover .guide-bar {
+    background: rgba(1,1,1,.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7rem;
+    z-index: 1;
+    text-align: center;
+}
+.welcome-cover .guide-bar .wrap {
+    position: relative;
+    width: 460px;
+    height: 90px;
+    margin: auto;
+}
+.welcome-cover .guide-bar .icon {
+    margin-top: 34px;
+    background-image: url(/static/img/h-chuangyi.png);
+    background-repeat: no-repeat;
+    -moz-background-size: contain;
+    background-size: contain;
+    height: 21px;
+    width: 150px;
+    float: left;
+    display: block;
+}
+.welcome-cover .guide-bar span {
+    margin-top: 30px;
+    float: left;
+    display: block;
+    padding: 0 34px;
+    font-size: 21px;
+    color: #c99a05;
+}
+.welcome-cover .guide-bar a {
+    margin-top: 29px;
+    float: left;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+}
+.welcome-cover .guide-bar a i {
+    font-size: 20px;
+}
+/* container */
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+.hot-posts h2, .hot-events h2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 70px 0 0;
+    line-height: 1;
+    font-weight: 400;
+}
+.hot-posts p, .hot-events p {
+    text-align: center;
+    margin: 40px 0 70px;
+    line-height: 1;
+}
+.posts-list{
+    overflow:hidden;
+}
+.posts-list .post-item {
+     margin-top: 10px;
+    float:left;
+}
+.post-cover {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 14px;
+    background-position: center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.post-cover .post-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+}
+
+.post-cover .leave-left {
+    -webkit-animation: leave-left .3s ease-out;
+    -moz-animation: leave-left .3s ease-out;
+    animation: leave-left .3s ease-out;
+}
+@-webkit-keyframes leave-left{
+    0% {
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        z-index: 0;
+    }
+    100% {
+        -webkit-transform: translate3d(-100%,0,0);
+        -moz-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+        z-index: -1;
+    }
+}
+.post-cover .post-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-height: 50px;
+    padding: 0 10px;
+    margin: 0;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    overflow: hidden;
+}
+.post-cover .post-author-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.post-cover .post-author-name {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #fff;
+}
+.events-list li {
+    position: relative;
+    display: inline-block;
+    width: 380px;
+    height: 190px;
+    margin-left: 15px;
+    margin-top: 15px;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.events-list li .event-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.3);
+    border: 1px solid transparent;
+}
+.events-list li .event-mask:hover {
+    border-color: #ffa800;
+    background-color: rgba(0,0,0,.5);
+}
+.events-list li .event-title {
+    position: absolute;
+    left: 0;
+    bottom: 82px;
+    width: 100%;
+    max-height: 50px;
+    padding: 0 70px;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    overflow: hidden;
+}
+.events-list li .event-posts::before {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    width: 100px;
+    height: 1px;
+    margin-left: -50px;
+    background-color: rgba(255,255,255,.35);
+}
+.events-list li .event-posts {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #fff;
+    opacity: .7;
+    font-size: 12px;
+    text-align: center;
+}
+@media screen and (max-width:1024px){
+    .content{
+        width:100%;
+    }
+    .hot-posts h2, 
+    .hot-events h2 {
+        font-weight:bold;
+        padding: 0 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .hot-posts .section-word, .hot-events .section-word {
+        padding: 0 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:767px){
+    .welcome-cover .cover-author {
+        right: 5px;
+        bottom: 5px;  
+    }
+    .welcome-cover .guide-bar{
+        position: absolute;
+        bottom: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        overflow: hidden;
+        vertical-align: middle;
+        background: #000;
+        opacity: .7;
+    }
+    .welcome-cover .guide-bar .icon{
+        margin-top: 31px;
+        width: 100px;
+        height: 17px;
+    }
+    .welcome-cover .guide-bar span {
+        margin-top:0px;
+        padding: 0 15px;
+        font-size: 15px;
+        color: #c99a03;
+        display: inline-block;
+    }
+    .welcome-cover .guide-bar a {
+        margin-top:0px;
+        font-size: 12px;
+        color: #fff;
+    }
+    .cover-wrapper .link-ios,
+    .cover-wrapper .link-android{
+        display:none;
+    }
+}
